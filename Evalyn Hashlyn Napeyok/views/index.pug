@@ -1,0 +1,49 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset='utf-8')
+    title Music Upload — Streaming App
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='stylesheet' href='/css/styles.css')
+  body
+    main.layout
+      header
+        h1 Upload Your Music
+      section.content
+        
+        aside.form-card
+          form#songForm(enctype='multipart/form-data' novalidate='')
+            .cover-wrap
+              label.cover-label(for='coverInput')
+                #coverPreview.cover-preview
+                  span#coverPlaceholder +
+              input#coverInput(name='cover' type='file' accept='image/*' hidden='')
+              small#coverError.error
+              .cover-note Cover (jpg/png/webp) ≤ 2MB — click circle to choose
+            .fields
+              label Song Title *
+              input#title(name='title' type='text')
+              small#titleError.error
+              
+              label Artist *
+              input#artist(name='artist' type='text')
+              small#artistError.error
+              
+              label Album
+              input#album(name='album' type='text')
+              small#albumError.error
+              
+              label Year of Release
+              input#year(name='year' type='number' min='1888' max='2100')
+              small#yearError.error
+              
+              label Audio File * (mp3/wav/m4a/ogg) ≤ 10MB
+              input#audio(name='audio' type='file' accept='audio/*')
+              small#audioError.error
+              
+              button#submitBtn(type='submit') Upload Song
+              #notification.notification.hidden
+        section.gallery
+          h2 Uploads
+          #songsList.songs-list
+    script(src='/js/form.js')
