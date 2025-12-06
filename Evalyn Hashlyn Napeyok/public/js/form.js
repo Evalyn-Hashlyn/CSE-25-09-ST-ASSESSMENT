@@ -13,7 +13,7 @@ coverInput.addEventListener("change", () => {
     img.src = URL.createObjectURL(file);
     coverPreview.appendChild(img);
   } else {
-    coverPreview.innerHTML = "<span id='coverPlaceholder'>+</span>";
+    coverPreview.innerHTML = `<span class="cover-text">Cover Photo</span>`;
   }
 });
 
