@@ -15,9 +15,8 @@ html(lang="en")
             label.cover-label(for="coverInput")
               #coverPreview.cover-preview
                 span.cover-text Cover Photo
-            input#coverInput(type="file" name="cover" placeholder="Cover Photo" accept="image/*" hidden)
+            input#coverInput(type="file" name="cover" accept="image/*" hidden)
             small#coverError.error
-
           .fields
             input#title(type="text" name="title" placeholder="Song title")
             small#titleError.error

@@ -5,7 +5,7 @@ const songController = require("../controllers/songController");
 const path = require("path");
 const fs = require("fs");
 
-// Ensure upload folders exist
+// upload folders
 ["public/audio", "public/images/uploads"].forEach(dir => {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 });
