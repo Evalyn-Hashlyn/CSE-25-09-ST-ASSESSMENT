@@ -87,6 +87,28 @@ body {
   font-size: 16px;
 }
 
+/* VALID INPUT (GREEN BORDER) */
+.input-valid {
+  border: 2px solid #28a745 !important;
+  background-color: #e9f9ee;
+}
+
+/* INVALID INPUT (RED BORDER) */
+.input-invalid {
+  border: 2px solid #dc3545 !important;
+  background-color: #fdecea;
+}
+
+/* Error text */
+.error {
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: -4px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+
 .fields {
   display: flex;
   flex-direction: column;
